@@ -1,26 +1,35 @@
-import logo from './logo.svg';
+
 import './App.css';
-import Component from './Component';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Csharp from './components/Csharp';
+import Flutter from './components/Flutter';
+import Java from './components/Java';
+import JavaScript from './components/JavaScript';
+import Php from './components/Php';
+import Reac from './components/Reac';
+import Salud from './components/Salud';
+import Typescript from './components/Typescript';
+import Pyton from './components/Pyton';
+import Navigation from './components/Navigation';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          ¡ Hello, I am Jose Yamil Nuñez Amaya
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-        < Component/>
-      </header>
-    </div>
+  <Router>
+    
+    <Routes>
+    <Route path="/csharp" element={<Csharp className="image-size" />}/>
+        <Route path="/flutter" element={<Flutter className="image-size" />}/>
+        <Route path="/java" element={<Java className="image-size" />}/>
+        <Route path="/javascript" element={<JavaScript className="image-size" />}/>
+        <Route path="/php" element={<Php className="image-size" />}/>
+        <Route path="/phyton" element={<Pyton className="image-size" />}/>
+        <Route path="/react" element={<Reac className="image-size" />}/>
+        <Route path="/salud" element={<Salud className="image-size" />}/>
+        <Route path="/typescript" element={<Typescript className="image-size" />}/>
+      </Routes>
+      <Navigation />
+    </Router>
   );
 }
 
